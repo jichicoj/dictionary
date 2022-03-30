@@ -1,7 +1,7 @@
 public class Word {
-    String english;
-    String spanish;
-    String french;
+    private String english;
+    private String spanish;
+    private String french;
 
     public Word(String english, String spanish, String french) {
         this.english = english;
@@ -31,5 +31,21 @@ public class Word {
 
     public void setFrench(String french) {
         this.french = french;
+    }
+
+    public String getWord(int option) {
+        switch (option) {
+            case 1:
+                return getEnglish();
+            case 2:
+                return getFrench();
+            default:
+                return getSpanish();
+        }
+    }
+
+    @Override
+    public String toString() {
+        return english + ',' + spanish + ',' + french;
     }
 }

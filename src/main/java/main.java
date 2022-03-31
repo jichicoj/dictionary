@@ -28,6 +28,8 @@ public class main {
                 }
             }
 
+            System.out.println("Seleccione el diccionario a utilizar");
+
             BinarySearchTree<ComparableAssociation<String, Word>> data = getWords(option);
 
             while (exit) {
@@ -40,6 +42,8 @@ public class main {
                     System.out.println("ERROR. La opción ingresada no se encuentra disponible.");
                 }
             }
+
+            System.out.println("Seleccione el documento a traducir");
 
             String phrase = getFile();
 
